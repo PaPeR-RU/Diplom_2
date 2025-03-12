@@ -1,0 +1,17 @@
+praktikum\responseEntities\UserResponsed.class
+praktikum\resthandlers\httpclients\UserHTTPClient.class
+praktikum\ApiUrls.class
+praktikum\tests\LoginUserTests.class
+praktikum\requestEntities\Ingredient.class
+praktikum\requestEntities\Order.class
+praktikum\resthandlers\httpclients\BaseHTTPClient.class
+praktikum\tests\CreateOrderTests.class
+praktikum\responseEntities\IngredientsResponsed.class
+praktikum\resthandlers\httpclients\OrderHTTPClient.class
+praktikum\tests\CreateUserTests.class
+praktikum\resthandlers\apiclients\ResponseChecks.class
+praktikum\tests\OrderListTests.class
+praktikum\resthandlers\apiclients\OrderApiClient.class
+praktikum\resthandlers\apiclients\UserApiClient.class
+praktikum\tests\ChangeUserDataTests.class
+praktikum\requestEntities\User.class
