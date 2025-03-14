@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: ru.praktikum.tests.CreateOrderTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.398 s <<< FAILURE! - in ru.praktikum.tests.CreateOrderTests
+createOrderWithAuthAndIngredientsIsSuccess(ru.praktikum.tests.CreateOrderTests)  Time elapsed: 1.095 s  <<< ERROR!
+java.lang.NullPointerException
+	at ru.praktikum.tests.CreateOrderTests.createOrderWithAuthAndIngredientsIsSuccess(CreateOrderTests.java:80)
+
+createOrderWithAuthAndIncorrectIngredientsIsFailed(ru.praktikum.tests.CreateOrderTests)  Time elapsed: 1.027 s  <<< ERROR!
+java.lang.NullPointerException
+	at ru.praktikum.tests.CreateOrderTests.createOrderWithAuthAndIncorrectIngredientsIsFailed(CreateOrderTests.java:115)
+
+createOrderWithoutAuthAndWithIngredientsIsFailed(ru.praktikum.tests.CreateOrderTests)  Time elapsed: 1.025 s  <<< ERROR!
+java.lang.NullPointerException
+	at ru.praktikum.tests.CreateOrderTests.createOrderWithoutAuthAndWithIngredientsIsFailed(CreateOrderTests.java:93)
+

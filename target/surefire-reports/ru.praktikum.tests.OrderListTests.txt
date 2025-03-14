@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: ru.praktikum.tests.OrderListTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.095 s <<< FAILURE! - in ru.praktikum.tests.OrderListTests
+getOrderListAllIsSuccess(ru.praktikum.tests.OrderListTests)  Time elapsed: 1.072 s  <<< ERROR!
+java.lang.NullPointerException
+	at ru.praktikum.tests.OrderListTests.prepareTestData(OrderListTests.java:59)
+
+getOrderListWithoutAuthIsFailed(ru.praktikum.tests.OrderListTests)  Time elapsed: 1.009 s  <<< ERROR!
+java.lang.NullPointerException
+	at ru.praktikum.tests.OrderListTests.prepareTestData(OrderListTests.java:59)
+
+getOrderListWithAuthIsSuccess(ru.praktikum.tests.OrderListTests)  Time elapsed: 1.011 s  <<< ERROR!
+java.lang.NullPointerException
+	at ru.praktikum.tests.OrderListTests.prepareTestData(OrderListTests.java:59)
+
