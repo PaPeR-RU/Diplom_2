@@ -1,0 +1,57 @@
+package ru.praktikum.resthandlers.apiclients;
+
+import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
+import io.restassured.response.Response;
+import org.hamcrest.MatcherAssert;
+import ru.praktikum.request.entities.User;
+import ru.praktikum.response.entities.UserResponsed;
+import ru.praktikum.resthandlers.httpclients.UserHTTPClient;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.fail;
+
+public class UserApiClient extends UserHTTPClient {
+    @Step("Отправка запроса на создание пользователя")
+    public Response createUser(String email, String password, String name) {
+        return super.createUser(new User(email, password, name));
+    }
+
+    @Step("Отправка запроса на логин пользователя")
+    public Response loginUser(String email, String password) {
+        return super.loginUser(new User(email, password));
+    }
+
+    @Step("Удаление пользователя")
+    public Response deleteUser(String token) {
+        return super.deleteUser(token);
+    }
+
+    @Step("Обновление информации о пользователе")
+    public Response updateUser(String email, String password, String name, String token) {
+        return super.updateUser(new User(email, password, name), token);
+    }
+
+    @Step("Проверка данных пользователя")
+    public void checkUser(Response response, String expectedMail, String expectedName) {
+        User actualUser = response.body().as(UserResponsed.class).getUser();
+        Allure.addAttachment("Новый пользователь", actualUser.toString());
+
+        // Проверяем email и name
+        MatcherAssert.assertThat("Не совпадают email-ы", actualUser.getEmail(), equalTo(expectedMail));
+        MatcherAssert.assertThat("Не совпадают имена", actualUser.getName(), equalTo(expectedName));
+    }
+
+    @Step("Получение токена авторизации")
+    public String getToken(Response response) {
+        UserResponsed userResponse = response.body().as(UserResponsed.class);
+        if (userResponse == null || userResponse.getAccessToken() == null) {
+            fail("Токен не получен");
+        }
+
+        String token = userResponse.getAccessToken().split(" ")[1];
+        Allure.addAttachment("Ответ", response.getStatusLine());
+        Allure.addAttachment("Токен", token);
+        return token;
+    }
+}
