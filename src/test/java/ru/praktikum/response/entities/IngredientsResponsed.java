@@ -1,5 +1,6 @@
 package ru.praktikum.response.entities;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.Setter;
 import ru.praktikum.request.entities.Ingredient;
@@ -8,9 +9,10 @@ import java.util.List;
 
 public class IngredientsResponsed {
     @Getter @Setter
-    public String success;
+    private String success;
+
     @Getter @Setter
-    public List<Ingredient> data;
+    private List<Ingredient> data;
 
     public IngredientsResponsed() { }
 

@@ -48,11 +48,21 @@ public class CreateOrderTests {
         response = orderApi.getIngredientList();
         checks.checkStatusCode(response, 200);
 
-        ingredients = response.body().as(IngredientsResponsed.class).getData();
+        // Десериализация ответа
+        IngredientsResponsed ingredientsResponse = response.body().as(IngredientsResponsed.class);
+        if (ingredientsResponse == null) {
+            fail("Ответ от API не содержит данных");
+        }
 
-        // Проверка, что список ингредиентов не пуст
+        ingredients = ingredientsResponse.getData();
         if (ingredients == null || ingredients.isEmpty()) {
             fail("Список ингредиентов пуст или не получен");
+        }
+
+        // Логирование для отладки
+        System.out.println("Полученные ингредиенты: " + ingredients);
+        for (Ingredient ingredient : ingredients) {
+            System.out.println("Ингредиент: " + ingredient.getId() + ", " + ingredient.getName());
         }
 
         // Проверка, что токен получен
@@ -73,9 +83,27 @@ public class CreateOrderTests {
     @Test
     @DisplayName("Создание заказа: с авторизацией и с ингредиентами")
     public void createOrderWithAuthAndIngredientsIsSuccess() {
+        // Проверка, что список ингредиентов не пуст
+        if (ingredients == null || ingredients.isEmpty()) {
+            fail("Список ингредиентов пуст или не получен");
+        }
+
+        // Проверка, что первый и последний ингредиенты не равны null
+        Ingredient firstIngredient = ingredients.get(0);
+        Ingredient lastIngredient = ingredients.get(ingredients.size() - 1);
+
+        if (firstIngredient == null || lastIngredient == null) {
+            fail("Ингредиенты в списке равны null");
+        }
+
         // Получаем ID первого и последнего ингредиента
-        String firstIngredientId = ingredients.get(0).getId();
-        String lastIngredientId = ingredients.get(ingredients.size() - 1).getId();
+        String firstIngredientId = firstIngredient.getId();
+        String lastIngredientId = lastIngredient.getId();
+
+        // Проверка, что ID ингредиентов не равны null
+        if (firstIngredientId == null || lastIngredientId == null) {
+            fail("ID ингредиентов равны null");
+        }
 
         Response response = orderApi.createOrder(List.of(firstIngredientId, lastIngredientId), token);
 

@@ -47,11 +47,21 @@ public class OrderListTests {
         response = orderApi.getIngredientList();
         checks.checkStatusCode(response, 200);
 
-        ingredients = response.body().as(IngredientsResponsed.class).getData();
+        // Десериализация ответа
+        IngredientsResponsed ingredientsResponse = response.body().as(IngredientsResponsed.class);
+        if (ingredientsResponse == null) {
+            fail("Ответ от API не содержит данных");
+        }
 
-        // Проверка, что список ингредиентов не пуст
+        ingredients = ingredientsResponse.getData();
         if (ingredients == null || ingredients.isEmpty()) {
             fail("Список ингредиентов пуст или не получен");
+        }
+
+        // Логирование для отладки
+        System.out.println("Полученные ингредиенты: " + ingredients);
+        for (Ingredient ingredient : ingredients) {
+            System.out.println("Ингредиент: " + ingredient.getId() + ", " + ingredient.getName());
         }
 
         // Создание заказа

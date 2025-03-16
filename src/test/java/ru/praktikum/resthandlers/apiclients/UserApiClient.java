@@ -9,6 +9,7 @@ import ru.praktikum.response.entities.UserResponsed;
 import ru.praktikum.resthandlers.httpclients.UserHTTPClient;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.fail;
 
 public class UserApiClient extends UserHTTPClient {
     @Step("Отправка запроса на создание пользователя")
@@ -43,7 +44,12 @@ public class UserApiClient extends UserHTTPClient {
 
     @Step("Получение токена авторизации")
     public String getToken(Response response) {
-        String token = response.body().as(UserResponsed.class).getAccessToken().split(" ")[1];
+        UserResponsed userResponse = response.body().as(UserResponsed.class);
+        if (userResponse == null || userResponse.getAccessToken() == null) {
+            fail("Токен не получен");
+        }
+
+        String token = userResponse.getAccessToken().split(" ")[1];
         Allure.addAttachment("Ответ", response.getStatusLine());
         Allure.addAttachment("Токен", token);
         return token;

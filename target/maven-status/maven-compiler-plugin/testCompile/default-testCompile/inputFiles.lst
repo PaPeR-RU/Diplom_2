@@ -1,17 +1,17 @@
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\ApiUrls.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\request\entities\Ingredient.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\request\entities\Order.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\request\entities\User.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\response\entities\IngredientsResponsed.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\response\entities\UserResponsed.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\apiclients\OrderApiClient.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\apiclients\ResponseChecks.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\apiclients\UserApiClient.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\httpclients\BaseHTTPClient.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\httpclients\OrderHTTPClient.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\httpclients\UserHTTPClient.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\ChangeUserDataTests.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\CreateOrderTests.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\CreateUserTests.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\LoginUserTests.java
-C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\OrderListTests.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\ApiUrls.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\request\entities\Ingredient.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\request\entities\Order.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\request\entities\User.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\response\entities\IngredientsResponsed.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\response\entities\UserResponsed.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\apiclients\OrderApiClient.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\apiclients\ResponseChecks.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\apiclients\UserApiClient.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\httpclients\BaseHTTPClient.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\httpclients\OrderHTTPClient.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\resthandlers\httpclients\UserHTTPClient.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\ChangeUserDataTests.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\CreateOrderTests.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\CreateUserTests.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\LoginUserTests.java
+D:\JAVA\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_2\src\test\java\ru\praktikum\tests\OrderListTests.java

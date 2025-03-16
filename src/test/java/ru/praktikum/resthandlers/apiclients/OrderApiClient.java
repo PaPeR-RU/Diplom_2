@@ -15,7 +15,10 @@ public class OrderApiClient extends OrderHTTPClient {
 
     @Step("Получение списка ингредиентов")
     public Response getIngredientList() {
-        return super.getIngredientList();
+        Response response = super.getIngredientList();
+        // Логирование для отладки
+        System.out.println("Ответ от API (список ингредиентов): " + response.getBody().asString());
+        return response;
     }
 
     @Step("Получение списка заказов")
